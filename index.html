@@ -5,356 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .main{
-            display:flex;
-            /* justify-content: space-between;*/
+
+        *{
+            margin: 0;
+        }
+        body{
+            background: lightskyblue;
+            display: flex;
             justify-content: center;
-            gap: 5px;
-            flex-wrap: wrap;
+            align-items: center;
+            height: 100vh;
         }
-        .Products{
+        section{
+            background-color: white;
+            padding: 10px;
+            width: 400px;
+        }
+        input{
+            padding: 10px;
             width: 250px;
-            height: 250px;
-            border: 2px solid;
-        }
-        img{
-            width: 200px;
-            height: 150px;
-            margin: auto;
-            display: block;
-        }
-        h1{
+            margin-left: 5px;
             font-size: 20px;
-            color: red;
+        }
+        button{
+            padding: 10px;
+            margin-left: -5px;
+            font-size: 20px;
+        }
+        .data{
+            text-align: center;
+        }
+        h1,h2,h3{
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    
-<!-- <a name="html">Text content</a>
-<a name="html" >Text content1</a>
-<a name="html">Text content</a> 
-<p id="para"></p> -->
-
-<!-- <button onclick="display()">Click</button> -->
-<!-- <a href="./Arrays.html">P1</a>
-<a href="./Conversion.html">P2</a>
-<button onclick="display()">forward</button> -->
-
-<div class="main"></div>
-
+    <section>
+    <input type="text" placeholder="Enter location">
+    <button>Get data</button>   
+    <div class="data">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8EA5P9Jdkvinzyixdc8KSS5yKsLQ8El7sew&s" alt="" width="100px" height="100px">
+   <h1><span id="temp">25</span>&deg;C</h1>
+   <h3>Cloudy</h3>
+   <h2>Hyderabad</h2>
+</div>
+    </section>
+    <!-- Script -->
     <script>
-//         let c = document.anchors[0]
+        let input = document.querySelector('input')
+        let temp =document.querySelector('temp')
+        let btn = document.querySelector('button')
+        let h1 = document.querySelector('span')
+        let des = document.querySelector('h3')
+        let loc = document.querySelector('h2')
 
-//    document.getElementById('para').innerHTML = c
+// d86003b4637d6a38dfe4cc3c2afcca1b
+        let apikey = 'd86003b4637d6a38dfe4cc3c2afcca1b';
+        btn.onclick=function(){
 
+            if(input.value===''){
+            alert('Enter the valid location')
+        }else{
+            let url =`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${apikey}`
+            fetch(url).then(responce => responce.json()).then(result =>{
+            console.log(result)
 
-// var big;
-// var a = 5
-// var b =8
-// big = a>b? a:b ;
-// a>b?document.write("a is big"):document.write("b is big")
+            let {name} = result;
+            let {temp} = result.main;
+            let {description} = result.weather[0]
 
-// [BOM TYPES:]:
+            console.log(name,temp,description)
 
-// 1)Window.object:
-
-// let a= confirm("Do you want to confirm")
-
-// if(a){
-//     alert("Submitted successfully")
-// }else{
-//     alert("Cancelled")
-// }
-
-// function display(){
-//    open("https://www.w3schools.com/js/")
-//     close()
-// }
-
-// close()
-
-//Set timeinterval have two parameters:
-// 1)Callback()
-// 2)Time (milliseconds)
-
-// setInterval(()=>{
-//     document.write("hello" + "<br>")
-// },1000)
-
-// setTimeout(()=>{
-//     document.write("byeee")
-// },4000)
-
-//History object(forward,back)
-
-
-// function display(){
-//     history.forward()
-// }
-
-// Navigator object :
-// Screen object: 
-// Location:
-// Cookies:
-// [ We will Write in console to check the objects]
-
-// ERROR HANDILINGS:---
-// try
-// catch
-// finally
-// throw
-
-/*try{
-    console.log("HELLO")
-    // aler('HI')
-    throw("This is my error")
-}
-
-catch(emmm){
-    console.log(emmm)
-}
-// 
-finally{
-    console.log("Manohar")
-}
-
-console.log("Byee")*/
-
-// STORAGES:
-// 1)local Storage:
-// 2)Session Storage:
-// localStorage.setItem("Username","Manohar")
-// sessionStorage.setItem("Username","Manohar")
-
-// ES6 MODULES:
-/*
-1.Spread operators
-2.Rest operators
-3. for each
-4.map
-5.filter
-6.reduce
-7.destructuring
-8.Call apply bind
-9.Asynchronous & promises & Callbacks
-*/
-
-// 1.Spread operators & 2.Rest opertors
-
-// function name(a,b,...Manohar){
-//     console.log(a)
-//     console.log(b)
-//     console.log(Manohar)
-//        sum=0
-//        for(var e of Manohar){
-//         sum+=e
-//        }
-//     // console.log(a+b,Manohar)
-//     console.log(sum+a+b)
-// }
-// name(1,2,3,4,5,6,7,8,9,10)
-
-// [a,b,c,...rest] = [1,2,3,4,5,6,7]
-// console.log(a,b,c,rest)
-
-// 2.Spread operators
-
-// var a = [1,2,3,4,5]
-// var b = [6,7,8,9,10]
-
-// console.log(a+b)
-// console.log(a.concat(b))
-// console.log([...a,...b])
-
-// OBJECT:
-
-// var obj1 ={
-//     name:"Manohar"
-// }
-
-// var obj2 ={
-//     location:"Rajahmundry"
-// }
-
-// console.log({...obj1,...obj2})
-
-// var a= [6,7,8,9,10,11]
-
-// let foreach = a.forEach((values,index,array) => {
-//     console.log(values*2)
-//     // return(values*2)
-// });
-
-// console.log('foreach',foreach)
-
-// let map = a.map((v,i,a)=> /*v*2*/ a)
-
-// console.log('map',map)
-
-// FILTER:---
-
-// var a = [6,7,8,9,10,11]
-
-// let filter = a.filter((v,i,a)=> v!=6)
-
-// console.log(filter)
-
-// FIND:---
-
-/*var a = [{
-    id:1,
-    name : "XYZ",
-    location:"Rjy"
-},
-
-{
-    id:2,
-    name:"ABC",
-    location:"Apt"
-},
-]
-
-let find = a.find((e)=>
-e.name==='ABC')
-console.log(find)*/
-
-// FINDINDEX:---
-
-/*var a = [{
-    id:1,
-    name : "XYZ",
-    location:"Rjy"
-},
-
-{
-    id:2,
-    name:"ABC",
-    location:"Apt"
-},
-]
-    let data = {
-    id:3,
-    name:"EFG",
-    location:"Tuni"
-}
-
-let filter = a.findIndex(e=> e.id ==2)
-console.log('filter',filter)
-a.splice(filter,1,data)
-console.log(a)*/
-
-// REDUCE:---
-
-/*let s = [6,7,8,9,10,11]
-let reduce = s.reduce((p,c,i,a) =>p+c)
-console.log(reduce)*/
-
-
-
-// Callback():
-
-/*a(10,(result,error)=>{
-    if(!error){
-        b(result,(result1,error)=>{
-            if(!error){
-                c(result1,(result2,error)=>{
-                    if(!error){
-                        console.log(result2)
-                    }
-                })
-            }
+            temp.innerText = Math.round(temp-273)
+            loc.innerText = name
+            des.innerHTML = description
         })
     }
-})
-
-
-function a(value,callback){
-    callback(value+10,false)
-}
-
-function b(value,callback){
-    callback(value+10,false)
-}
-
-function c(value,callback){
-    callback(value+10,false)
-} */
-
-
-// PROMISES():
-
-/*function a(value,error){
-    return new Promise((resolve, reject) => {
-        if(!error){
-            resolve(value+10)
-        }
-        else{
-            reject("Something went wrong")
-        }
-    })
-}
-
-function b(value,error){
-    return new Promise((resolve, reject) => {
-        if(!error){
-            resolve(value+10)
-        }
-        else{
-            reject("Something went wrong")
-        }
-    })
-}
-
-function c(value,error){
-    return new Promise((resolve, reject) => {
-        if(!error){
-            resolve(value+10)
-        }
-        else{
-            reject("Something went wrong")
-        }
-    })
-}  */
-
-// a(10,false)
-// .then(result =>  b(result,false))
-// .then(result1 => c(result1,false))
-// .then(result2 =>  console.log(result2))
-
-
-// Async & Awaitt:---
-// (Alternate method for then method)
-
-/*async function display(){
-    let result = await a(10,false)
-    let result1 = await b(result,false)
-    let result2 = await c(result1,false)
-    .catch(e => console.log(e))
-    console.log(result)
-}
-
-display() */ 
-
-// API'S:
-
-let div = document.querySelector('div')
-
-fetch('https://fakestoreapi.com/products')
-.then((resp) => resp.json())
-.then((result) => {
-console.log(result)
-    div.innerHTML = result.map((e) => {
-         return(
-            `<div class="Products">
-             <img src=${e.image}>
-             <h1>${e.title}</h1>
-             <h3>${e.price}</h3>
-             <button>Buy now </button>
-             </div>`
-         )
-    })
-});
+    }     
+//   [ LONGITUTUDE & LATITUDE ]
 
     </script>
 </body>
