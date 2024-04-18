@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+    //38.Print the Numbers Which are divisible by 5 and the number must greater than the 200 for given range (The Start must be from 100 and End must not more than 1000,both has to take from the user).
+
+    //  var h =parseInt(prompt('Enter start Value'))
+    //  var b=parseInt(prompt('Enter stop Value'))
+// for(i=h;i<=b;i++){
+
+// if(i%5==0 && i>=200 && i<=1000){
+//     document.write(i+ ' ')
+// }
+// }
+
+//1)Without Arguments/Without Return Type:
+
+function Divisible(){
+
+    var startValue = parseInt(prompt('Enter start Value'));
+    var stopValue = parseInt(prompt('Enter stop Value'));
+
+    if (startValue<100 && stopValue>1000) {
+        console.log("Invalid input");
+    }
+    for (let i=startValue; i<=stopValue; i++) {
+        if (i>200 && i%5==0) {
+            console.log(i);
+        }
+    }
+}
+Divisible();
+
+
+//2)Without Arguments/With Return Type:
+
+/*function Divisible() {
+
+    var startValue = parseInt(prompt('Enter start Value'));
+    var stopValue = parseInt(prompt('Enter stop Value'));
+
+    if (startValue<100 && stopValue>1000) {
+        console.log("Invalid input");
+        return [];
+    }
+    const result = [];
+    for (let i=startValue; i<=stopValue; i++) {
+        if (i>200 && i%5==0) {
+            result[result.length]=i;
+        }
+    }
+
+    return result;
+}
+var Result =Divisible();
+console.log("Numbers greater than 200 and it is divisible by 5:", Result);*/
+
+//3)With Argument/Without Return Type:
+
+/*var startRange = parseInt(prompt('Enter start Value'));
+var endRange = parseInt(prompt('Enter stop Value'));
+
+function Divisible(startValue, stopValue) {
+
+    if (startValue<100 && stopValue>1000) {
+        console.log("Invalid input");
+        return;
+    }
+    for (let i=startValue; i<=stopValue; i++) {
+        if (i>200 && i%5==0) {
+            console.log(i);
+        }
+    }
+}
+Divisible(startRange, endRange);*/
+
+//4)With Arguments/With Return Type:
+
+/*var startRange = parseInt(prompt('Enter start Value'));
+var endRange = parseInt(prompt('Enter stop Value'));
+
+function Divisible(startValue, stopValue) {
+    
+    if (startValue<100 && stopValue>1000) {
+        console.log("Invalid input");
+        return [];
+    }
+    const result = [];
+    for (let i = startValue; i <= stopValue; i++) {
+        if (i>200 && i%5==0) {
+            result[result.length]=i;
+        }
+    }
+    return result;
+}
+var Result =Divisible(startRange, endRange);
+console.log("Numbers greater than 200 and divisible by 5:", Result);*/
+
+    </script>
+</body>
+</html>

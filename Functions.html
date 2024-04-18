@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+
+// Functions
+
+// Syntax:
+
+// function name(parameters/Arguments){
+
+//     statements
+
+// }
+
+    // a+b
+   // 2,3 5,10
+
+//Types:
+// 1.Normal
+// 2.Arrow
+// 3.Anonymous
+// 4.Callback
+// 5.iife-(immediately invoked function expression)
+
+/*
+// 1.2.3.4.5-(4-types)
+
+1)Without Arguments/Without Return Type
+2)Without Arguments/With Return Type
+3)With Argument/Without Return Type
+4)With Arguments/With Return Type
+*/
+
+// 1)Without Arguments/Without Return Type:
+
+//  function abc(){
+//     var a=10;
+//     var b=20;
+//     var c= 25;
+//     var d=a+b+c
+//     console.log(d)
+// }
+
+// abc()
+
+// 2)Without Arguments/With Return Type
+
+//     var a=10;
+//     var b=20;
+//     var d=a+b
+// function abc(){
+
+//     var a=10;
+//     var b=20;
+//     var d=a+b
+//   //  console.log(d)
+//     return d= a+b
+// }
+// abc()
+
+//  document.write(abc()) 
+
+// 3)With Argument/Without Return Type
+
+//     var a=10;
+//     var b=20;
+// function abc(a,b){
+
+// console.log(a+b)
+// }
+// abc(10,20)
+
+// abc(60,150)
+ 
+// 4)With Arguments/With Return Type
+ 
+// var a=10;
+// var b=20;
+// function abc(a,b){
+//     console.log("Hello")
+//     console.log("Bye")
+//     return (a+b)
+
+//     // console.log("Bye")
+// }
+
+// console.log(abc(10,20))
+
+
+// 3.Anonymous:(Fn Without a Name )
+
+/*
+  Synatx:
+  variable name = function (){
+    statements
+  }
+*/
+
+// let abc=function (){
+
+//       console.log(" Hello ")
+
+// }
+// abc()
+
+// 2.Arrow
+
+
+  // Syntax:
+  // variable name = () => {
+  //   statements
+  // }
+  
+// Ex-1
+
+  // let a=() => {
+  //   console.log("Hiii")
+  // }
+
+  // a()
+
+// Ex-2
+
+//   let a = a =>{
+//     console.log(a)
+//   }
+//   a(10)
+
+  //Single line of statements 
+  
+  // let a = a => a
+
+  // console.log(a(1000))
+
+
+
+// function a(){
+
+    // return 10
+    // console.log(10)
+// }
+//   console.log(a())
+
+
+// function abc(){
+//    var a = b = c = null
+// console.log(typeof(a),typeof(b),typeof(c))
+
+// }
+
+// abc()
+// console.log(typeof(a),typeof(b),typeof(c))
+
+//number
+
+//undefined number number
+
+
+// 4.Callback
+
+/* Passing the fn as an argument to the another fn is called as callback fn*/
+
+// function a(callback){
+
+// console.log(callback())
+// // callback()
+
+// }
+
+// a(function(){
+//     // console.log(10)
+//     // console.log(25)
+//     return 100
+// })
+
+// callback =function (Automatic)
+
+
+// 5.iife-(immediately invoked function expression)
+
+// (function(a,b){
+//   console.log(a+b)
+// }(2,3))
+
+// function a(){
+
+// document.write(2+3+" ")
+// }
+
+// for(i=0;i<=100;i++){
+//    a()
+// }
+
+
+// Fn definition / Decleration:
+
+function sum(num1,num2){
+
+  var result = num1+num2;
+  return result;
+
+}
+
+// Calling the fn:
+
+console.log(sum(50,20))
+document.write("Function name <br>")
+document.write(sum(10,15))
+document.write("<br> Sum of 50,100:" + sum(50,100))
+
+</script>
+</body>
+</h

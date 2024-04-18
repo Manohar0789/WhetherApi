@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+    //read angles from the user,decide it is pentagon or not ?
+
+    let angle1 = parseFloat(prompt("Enter the 1st angle in degrees"));
+    let angle2 = parseFloat(prompt("Enter the 2nd angle in degrees"));
+    let angle3 = parseFloat(prompt("Enter the 3rd angle in degrees"));
+    let angle4 = parseFloat(prompt("Enter the 4thangle in degrees"));
+    let angle5 = parseFloat(prompt("Enter the 5th angle in degrees"));
+
+    let sumOfAngles =angle1 + angle2 + angle3 + angle4 + angle5;
+
+    if(sumOfAngles === 540){
+         console.log("Given angles forms a pentagon." );
+    }
+      else{
+          console.log(" Given angles does not form  a pentagon." );
+      }
+
+    </script>
+</body>
+</html>

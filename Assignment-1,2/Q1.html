@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+ 
+//    Sum of two Given Numbers 
+
+ var num1=+prompt("Enter number 1");
+
+ var num2=+prompt("Enter number 2");
+
+ var num3=num1+num2;
+
+ document.write("Sum of two numbers is: "+ num3);
+
+
+//  1)Without Arguments/Without Return Type:
+
+function sumOfTwoNumbers() {
+
+    var num1 = parseFloat(prompt('Enter the first number:'));
+    var num2 = parseFloat(prompt('Enter the second number:'));
+
+    var num3 = num1 + num2;
+    document.write('Sum of two numbers is: ', num3);
+}
+sumOfTwoNumbers();
+
+// 2)Without Arguments/With Return Type
+
+function SumOfTwoNumbers() {
+    
+    var num1 = parseFloat(prompt('Enter the first number:'));
+    var num2 = parseFloat(prompt('Enter the second number:'));
+    return num1 + num2;
+}
+var num3 =SumOfTwoNumbers();
+document.write('Sum of two numbers is: ', num3);
+
+// 3)With Argument/Without Return Type:
+
+var num1 = parseFloat(prompt('Enter the first number:'));
+var num2 = parseFloat(prompt('Enter the second number:'));
+function SumOfTwoNumbers(num1, num2) {
+    var sum = num1 + num2;
+    document.write('Sum of two numbers is: ', sum);
+}
+SumOfTwoNumbers(num1, num2);
+
+// 4)With Arguments/With Return Type
+
+var num1 = parseFloat(prompt('Enter the first number:'));
+var num2 = parseFloat(prompt('Enter the second number:'));
+function SumOfTwoNumbers(num1, num2) {
+
+    return num1 + num2;
+}
+
+var sum =SumOfTwoNumbers(num1, num2);
+document.write('Sum of two numbers is: ', sum);
+
+
+    </script>
+</body>
+</html>

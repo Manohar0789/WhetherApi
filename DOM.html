@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <h1 id="h1" class="h1">This is h11</h1>
+    <h1 id="h11" class="h1">This is h12</h1>
+
+     <div class="div" id="div">
+          <p id="p" class="p">This is p</p>
+     </div>
+
+     <h1 id="h1" class="h1">This is h112</h1>
+     <p id="h1" class="h1">This is h1</p>
+
+     <h4 ></h4>
+     
+<!-- <img src="../JAVA SCRIPT/Assignment-6/VBS.image.jpeg" alt=""> -->
+    
+
+     <script>
+     //     console.log(document.getElementById('h1')) //1st Way
+     //    let h1 = document.getElementById('h1')  //2nd Way
+
+     //    let h1 = document.getElementsByClassName('h1')[1]
+     //    let h1 = document.getElementsByTagName('h1')[2]
+
+     //     let q = document.querySelectorAll('h1') 
+     //     let q = document.querySelector('h1') [1]
+
+
+     //    console.log(h1)
+     //    console.log(q)
+        /* console.log(document.images) */
+
+
+        //  DOM MANIPULATION:
+
+
+        let h3 = document.createElement('h3')
+
+     //    h3.innerHTML = '<span style="color:red"> This is h3 <span>'
+        h3.innerText = '<span> This is h3 <span>'
+
+        console.log(h3) 
+
+     // document.body.append(h3) 
+
+     //1st way:
+
+     // document.getElementById('div').append(h3)
+
+     //2nd way:
+
+     let div = document.getElementById('div')
+//     div.append(h3)
+
+let h1 = document.getElementsByClassName('h1')
+// console.log(h1)
+
+// document.getElementById('div').insertBefore(h3,document.getElementById('p'))
+
+let h11 = document.getElementById('h11')
+// document.body.insertBefore(h3,h11)
+
+document.body.replaceChild(h3,h11) 
+
+// h3.remove()
+
+// set attribute
+
+h3.setAttribute('class','h3')
+h3.setAttribute('id','h3')
+h3.setAttribute('style','color:blue;font-size:100px;')
+
+
+for(var i in h1){
+      
+     h1[i].innerText = "Hello world"
+
+}
+
+h1.innerText = "Hello world"
+    div.append(h3)
+
+
+     </script>
+</body>
+</html>

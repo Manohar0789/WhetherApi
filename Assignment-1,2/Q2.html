@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+// Division of two given numbers
+
+var num1=+prompt('Enter num 1');
+
+var num2=+prompt('Enter num 2');
+
+var num3=num1%num2;
+
+document.write('Division of two Numbers is '+ num3)
+
+
+// 1)Without Arguments/Without Return Type:
+
+function divideTwoNumbers() {
+    var num1 = parseFloat(prompt('Enter the first number:'));
+    var num2 = parseFloat(prompt('Enter the second number:'));
+
+    if (num2!==0) {
+        var result = num1 / num2;
+        document.write('Division of two given numbers is: ', result);
+    } else {
+        document.write('Cannot divide by zero.');
+    }
+}
+divideTwoNumbers();
+
+// 2)Without Arguments/With Return Type:
+
+function Division() {
+    var num1 = parseFloat(prompt('Enter the first number:'));
+    var num2 = parseFloat(prompt('Enter the second number:'));
+
+    if (num2!==0) {
+        return num1 / num2;
+    } else {
+        document.write('Cannot divide by zero.');
+        return null;
+    }
+}
+var Result = Division();
+if (Result!==0) {
+    document.write('Division of two given numbers is: ', Result);
+}
+
+// 3)With Argument/Without Return Type:
+
+function Division(num1, num2) {
+
+    if (num2 !== 0) {
+        var result = num1 / num2;
+        document.write('Division of two given numbers is: ', result);
+    } else {
+        document.write('Cannot divide by zero.');
+    }
+}
+var num1 = parseFloat(prompt('Enter the first number:'));
+var num2 = parseFloat(prompt('Enter the second number:'));
+Division(num1, num2);
+
+// 4) With Arguments/With Return Type:
+
+function Division(num1, num2) {
+    if (num2!==0) {
+        return num1 / num2;
+    } 
+    else {
+        document.write('Cannot divide by zero.');
+        return null; 
+    }
+}
+var num1 = parseFloat(prompt('Enter the first number:'));
+var num2 = parseFloat(prompt('Enter the second number:'));
+
+var Result = Division(num1, num2);
+
+if (Result!==0) {
+       document.write('Division of two given numbers is: ', Result);
+}
+
+    </script>
+</body>
+</html>

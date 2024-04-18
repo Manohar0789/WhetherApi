@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script>
+
+// var a =parseInt(prompt('Enter Value'))
+
+// for(i=1;i<=100;i++){
+
+// if(i%3==0 && i%5==0){
+//     document.write(i+ ' -Fizz & Buzz' + ' ')
+// }
+// else if (i%3==0){
+//     document.write(i+' -Fizz ' +' ')
+// }
+// else if(i%5==0)
+//     document.write(i+ '-Buzz' + ' ')
+// else {
+//     document.write(i+' ')
+// }
+ 
+// }
+
+
+
+// function a(){
+
+//     Document.write(2+3+ " ");
+// }
+
+// var aa= " "
+// function a(){
+//     for(i=0;i<=100;i++){
+//         document.write(i+ " ")
+//     }
+
+//     return aa 
+// }
+
+// document.write(a())
+
+//Write the factorial of 10
+
+// start =+prompt('Start')
+// fact =1
+// for(i=start;i>=1;i--){
+//     fact*=i
+// }
+// console.log(fact)
+
+
+//Armstrong // 153 1+125+27 = 153
+
+//1st Way:
+
+/*number =1024
+
+string = number.toString()
+
+pow = string.length
+sum=0//1 + 125 +27 
+
+for(var ele of string){
+    console.log((parseInt(ele)**pow))
+   sum+= (parseInt(ele)**pow)
+}
+// console.log(sum)
+
+if(sum==number){
+    console.log(sum+ " is a armstrong number")
+}
+else{
+    console.log(sum+ " is not a armstrong number")
+
+}*/
+
+
+//2nd Way:
+// By using the Methods  (Split: Entire thing is Converted into array)
+
+
+/* num = 153
+
+string=num.toString().split('')
+
+pow = string.length
+sum = 0
+for(var ele of string){
+    console.log(+(ele**pow))
+    sum+=parseInt(ele**pow)
+}
+
+console.log(sum) */
+
+// var  a =10;
+// var  b = 20;
+
+// c=a+b;
+
+// console.log(c)
+
+// var a=10
+// var a=20
+// document.write(a)
+
+//Write the code if the given string palindrome or not..??
+
+// let str1 = 'manohar'
+// let str2 = 'nitin'
+// let str3 = 'racecar'
+//  function palindrome(){
+//     let M=" "
+//     for(let i=str.length-1;i>=0;i--){
+//         M +=str[i]
+//         if(M==str){
+//             return true
+//         }
+//         else{
+//             return false
+//         }
+//     }
+//  }
+//  console.log(str1)
+//  console.log(str2)
+//  console.log(str3)
+
+/*var a= 121
+var string = a
+var b=" "
+for(i=string.length-1;i>=0;i--){
+    b+=string[i]
+}
+if(string==b){
+    console.log('its a palindrome')
+}else{
+    console.log('its not  a palindrome')
+}
+
+console.log(b)*/
+
+// var a = 121
+// data =a
+// sum=0
+// b
+
+// while(a>0){
+
+//        b = (a%10)
+//        sum = sum*10 + b
+//        a=parseInt(a/10)
+
+//        console.log(a)
+//        console.log(sum)
+// }
+
+// console.log(sum)
+
+
+// a = 121
+// b = a.toString()
+
+// data=a.toString().split('').reverse().join('')
+
+// if(b==data){
+//     console.log("Palindrome")
+
+// }
+// else{
+//     console.log(" Not Palindrome")
+// }
+
+/* */
+// let a = 8128
+// sum = 0;
+// for(i=0;i<a;i++)
+// if(a%i==0){
+//     sum += i
+// }
+// console.log(sum)
+
+// if(sum==a){
+//     console.log("Given value is perfect number")
+// }
+// else{
+//     console.log("Given value is not a perfect number")
+
+// }
+
+/* Factorial */
+
+// start = +prompt('Start')
+// fact = 1
+
+// for(i=1;i<=start;i++){
+//     fact*=i
+// }
+
+// console.log(fact)
+
+//Write The Code For word to  firstletter only in the character
+
+// let a = 'fullstack development course'
+// b = a.split(' ') // b[0]  fullstack ==> b[0][0].toUpperCase()
+
+// console.log(b[0].slice(0))
+
+// for(i=0;i<b.length;i++){
+// //  b[i] = b[i][     i0].toUpperCase() + b[i].substr(1)
+//  b[i] = b[i][0].toUpperCase() + b[i].slice(1)
+
+// }
+
+// // console.log(b)
+//  c = b.join(' ')
+// console.log(c) 
+
+
+
+//Perfect Number:
+
+/*let a = 28 // 6,496,8128,33550336
+
+sum = 0
+
+for(i=0;i<a;i++){
+    if(a%i==0){
+        sum+=i
+    }
+}
+
+console.log(sum)
+
+if(sum==a){
+    console.log("Its a perfect number")
+}
+else{
+    console.log("Its not a perfect number")
+}*/
+
+// JavaScript program to reverse a string
+var s = ["hello world"];
+										
+var ans =" ";
+for (var i = 5; i >= 0; i--)
+{
+	ans += s[i] + " ";
+}
+console.log(ans.slice(0,ans.length-1));
+
+    </script>
+</body>
+</html>

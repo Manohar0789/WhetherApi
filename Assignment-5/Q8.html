@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+<script>
+    // 8.Find the How many elements are divisible by 4 and 8 in the Array ?
+
+        let a = new Array (16,20,40,32,64,83,55,100);
+        let Count = 0;
+        let Element = 0;
+
+      for (let i=0; i<a.length; i++) {
+
+        if (a[i]%4==0 && a[i]%8==0) { 
+          Element = a[i];
+          Count++;
+
+          console.log(a[i]);
+        }
+      }
+      console.log(" Given Elements are Divisible by Both 4 & 8 : " + Count);
+</script>
+</body>
+</html>

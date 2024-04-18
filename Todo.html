@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div>
+            <input type="text">
+            <button>Add</button>
+        </div>
+        <div class="list">
+            
+        </div>
+    </section>
+    <script>
+        let inp = document.querySelector('input')
+let btn= document.querySelector('button')
+let li = document.querySelector('.list')
+let h1 =document.querySelector('h1')
+let sec = document.querySelector('section')
+
+let x = document.querySelector('.x')
+
+h1.onclick = function(){
+    sec.style.display = 'block'
+    h1.style.display = 'none' 
+}
+
+x.onclick = function(){
+    
+    sec.style.display = 'none'
+    h1.style.display = 'block'
+}
+
+
+btn.onclick = function(){
+    if(inp.value ===''){
+        alert('enter something' )
+    }else{
+        li.innerHTML += `<div class='value'>
+        
+        <span>${inp.value} </span>
+
+        <i class="fa-solid fa-trash"></i>
+        </div>`
+
+        let del = document.querySelectorAll('.fa-trash')
+
+        for(i=0;i<del.length;i++){
+
+           del[i].onclick = function (){
+            console.log(this.parentNode)
+
+            console.log(this.parentNode.remove())
+
+           }
+
+      }
+        
+
+        
+
+    }
+}
+    </script>
+</body>
+</html>
+

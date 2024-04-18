@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+    <script>
+        // 12.Find the Average of the numbers which are divisible by 2,3 and 4..
+
+      let arr = new Array(2, 4, 6, 8, 12, 24, 36, 60);
+      let sum = 0;
+      let count = 0;
+
+      for (let i=0;i<arr.length;i++) {
+        if (arr[i]%2==0 && arr[i]%3==0 && arr[i]%4==0) {
+
+          sum += arr[i];
+          count++;
+        }
+      }
+
+      let Average = sum/count;
+      console.log("The Average of elements divisible by 2 ,3 and 4 is  " + Average);
+    </script>
+</body>
+</html>

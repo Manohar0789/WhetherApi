@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script>
+        // 14.Find the number of characters is repeated and it count in the string..?
+        
+        let str = "Key value pairs"
+        let count = {}
+        
+        for(i=0;i<str.length;i++){
+            let char = str[i]
+            count[char] = ( count[char] || 0) +1
+        }
+
+        for(let char in count){
+            if(count[char]>1){
+                console.log(char + 'count=' + count[char])
+            }
+        }
+    </script>
+</body>
+</html>

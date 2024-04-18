@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+        color: green;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- <button onclick= " document.body.style.background= 'red' " >Click</button> -->
+
+<input type="number" id="num1">
+<input type="number" id="num2">
+
+<!-- <button onclick="alert(num1.value+num2.value)">Click</button> -->
+
+<h1 id="h1"></h1>
+
+<!-- <button id="btn1">Click</button>
+<button id="btn2">Color change</button> -->
+
+<button onclick="name1()" id="btn1">Click</button>
+
+ <!-- <button onclick=" h1.innerText = parseInt(num1.value) + parseInt(num2.value)">Click</button>
+ <button onclick=" document.body.style.color= 'blue' ">Color change</button> -->
+
+
+ <script>
+    let num1 = document.getElementById('num1')
+    let num2 = document.getElementById('num2')
+    let h1 = document.getElementById('h1')
+    let btn1 = document.getElementById('btn1')
+    let btn2 = document.getElementById('btn2')
+
+    function name1(){
+     h1.innerText = parseInt(num1.value)+ parseInt(num2.value)
+        document.body.style.color= 'blue'
+    }
+    // USING EVENT PROPERTIES:
+
+    // btn1.onclick= function(){
+    //     h1.innerText = parseInt(num1.value)+ parseInt(num2.value)
+    //     document.body.style.color= 'blue'
+    // }
+
+    //------ btn1.onclick = name-----(using fn)
+
+    /*btn2.onmouseover = function(){
+        document.body.style.color= 'red'
+    }
+    // INPUT:
+   num1.onkeydown = function(){
+        // num1.style.color="orange"
+        // h1.innerText = Math.random()*10
+    }
+    // ONCHANGE:
+    num1.onchange = function(){
+        h1.innerText = num1.value
+    }
+    // Print 100 numbers:
+
+   /* btn1.onclick = function(){
+        for(i=0;i<=100;i++){
+            h1.innerText += i
+        }
+    } */
+
+    // USING ADDEVENTLISTNER METHOD:
+
+    // 1st way:
+    // btn1.addEventListener('click',function(){
+    //     h1.innerText = parseInt(num1.value)+ parseInt(num2.value)
+    //     document.body.style.color= 'blue'
+    // })
+
+    // 2 way:
+
+    // btn1.addEventListener('click',name)
+
+    // function name(){
+    // h1.innerText = parseInt(num1.value)+ parseInt(num2.value)
+    //     document.body.style.color= 'blue'
+
+    //  }
+
+ </script>
+</body>
+</html>

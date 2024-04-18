@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+    <script>
+    // Objects:
+// (real world entities)
+// Behaviour:Calculator inside the screen(Calling To Someone)
+
+/* ( objects having two things - one is properties and another one is behaviour)*/
+
+// 1) Object Literal:
+
+// var a = {
+//     name:'Manohar', age:23, course:'fs'
+    // age:23,
+    // course:'fs'
+// }
+// a.location = 'xyz'
+// console.log(a.name,a.age,a.course)
+// console.log(a)
+// document.write(a.name)
+// document.write(a.age)
+
+//    document.write(a['name'])
+
+//    console.log(a)
+
+   // 2)Using a new keyword with Object Constructor
+
+    // var b = new Object()
+
+
+//   b.name = 'abc'
+//    b.name = 'name'
+//    b.name = 'name'
+//    console.log(b)
+//    b.age = 123
+//    console.log(b.name)
+
+   // 3)Using a new keyword with a Constructor fn
+
+//    function  data(name,age,location){
+
+//    this.name = name
+//    this.age = age
+//    this.location=location
+
+//    }
+
+//    var a = new data('manohar',23,'rjy');
+
+//    a['name']='xyz'
+// //   console.log(a.name)
+//   console.log(a)
+
+/* Classes*/
+
+// classes are used to create the objects 
+
+// class name{
+//     constructor(name,age){
+//     this.name=name
+//     this.age=age
+//     }
+// }
+
+// var a = new name("xyz",15)
+// console.log(a.name,a.age)
+// console.log(a.age)
+
+// 5)Object.create()method:
+var b={
+   name:'manu' , age:21
+}
+var a = Object.create(b,
+    {name:{
+         value:'abc'
+}})
+
+// var a = Object.create(b,
+// { name:'abc'})
+// a.age = 25
+        //   console.log(a.name)
+        console.log(a)
+
+//         var  S = new Object ( )
+// S.name= "Manohar"
+// S.name="Suresh"
+// // S.name="Deepak"
+
+// console.log(S)
+
+
+    </script>
+</body>
+</html>
